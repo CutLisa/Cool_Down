@@ -32,7 +32,7 @@ const lang = languagesMap[shortLang] || "bangla";
 
 module.exports.config = {
   name: "bby",
-  aliases: ["Lisa"],
+  aliases: ["Baby"],
   version: "1.0.0",
   role: 0,
   author: "dipto",
@@ -74,7 +74,7 @@ module.exports.onStart = async function ({ api, args, event }) {
     const dipto = args.join(" ").toLowerCase();
     if (!args[0]) {
       api.sendMessage(
-        "𝐏𝐥𝐳 𝐭𝐲𝐩𝐞 Bot hi",
+        "𝐏𝐥𝐳 𝐭𝐲𝐩𝐞 Bby hi",
         event.threadID,
         event.messageID,
       );
