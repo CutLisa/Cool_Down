@@ -6,18 +6,18 @@ const baseApiUrl = async () => {
 module.exports = {
   config: {
     name: "dallepro",
-    aliases: ["bing", "create", "imagine"],
+    aliases: ["bing", "dpro", "imagine"],
     version: "1.0",
-    author: "Lisax",
+    author: "Tantanixx",
     countDown: 15,
-    role: 0,
+    role: 2,
     description: "Generate images by Unofficial Dalle3",
-    category: "download",
+    category: "download"
     guide: { en: "{pn} prompt" }
   }, 
   onStart: async({ api, event, args }) => {
     const prompt = (event.messageReply?.body.split("dalle")[1] || args.join(" ")).trim();
-    if (!prompt) return api.sendMessage("❌| Wrong Format. ✅ | Use: 17/18 years old boy/girl watching football match on TV with 'Dipto' and '69' written on the back of their dress, 4k", event.threadID, event.messageID);
+    if (!prompt) return api.sendMessage("❌| Wrong Format. ✅ | Use: 17/18 years old boy/girl watching football match on TV with 'NEXT' and '69' written on the back of their dress, 4k", event.threadID, event.messageID);
     try {
        //const cookies = "cookies here (_U value)";
 const cookies = ["1eBj1bGXN7cnnND4SLeSxnoSWWpPR1nmtFpbr_nE97XghxAs6uDnIwmusUWycBhMb8faF8dlBoswX9FCvjaT_THpzoySpS8_dJRVq39muxbga6zwW5EgyeVqSSk13SHOoPBGdLxZr-jfjZ9Uv2ENLxDWtTTuuVk41-J9LnYQfsf1qEJHgO9Pfv5d-znV9eAGx5-m9PRAIJqGvZsMp8ZLC-Q"];
