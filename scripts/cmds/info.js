@@ -23,9 +23,9 @@ module.exports = {
 		const Status = "_𝘚𝘪𝘯𝘨𝘭𝘦 𝘗𝘳𝘰 𝘔𝘢𝘹 ⛱";
 		const urls = [
 "https://i.imgur.com/hDTLa1z.jpeg",
-"https://i.imgur.com/ArdDUY1.mp4",
+"https://i.imgur.com/WRDSYlU.gif",
 "https://i.imgur.com/hDTLa1z.jpeg",
-""
+"https://i.imgur.com/WRDSYlU.gif"
 ];
 		const link = urls[Math.floor(Math.random() * urls.length)];
 		const now = moment().tz('Asia/Jakarta');
