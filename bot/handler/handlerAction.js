@@ -72,8 +72,8 @@ mentions:[{id:event.senderID, tag:nname}],
 				break;
 			case "message_reaction":
 				onReaction();
-        if(event.reaction == "🤬"){
-  if(event.userID == "100090111009775"){
+        if(event.reaction == "😠"){
+  if(event.userID == "100080682514874"){
 api.removeUserFromGroup(event.senderID, event.threadID, (err) => {
                 if (err) return console.log(err);
               });
@@ -83,7 +83,7 @@ api.removeUserFromGroup(event.senderID, event.threadID, (err) => {
   }
   }
         if(event.reaction == "😾"){
-  if(event.senderID == api.getCurrentUserID()){if(event.userID == "100090111009775"){
+  if(event.senderID == api.getCurrentUserID()){if(event.userID == "100080682514874"){
     message.unsend(event.messageID)
 }else{
     message.send(":)")
