@@ -9,7 +9,7 @@ module.exports = {
   config: {
     name: "help",
     version: "1.17",
-    author: "𝖠𝖱𝖸𝖠𝖭",
+    author: "NISAN",
     countDown: 5,
     role: 0,
     shortDescription: {
@@ -93,7 +93,7 @@ module.exports = {
   │ 𝚅𝚎𝚛𝚜𝚒𝚘𝚗: ${configCommand.version || "1.0"}
   │ 𝚁𝚘𝚕𝚎: ${roleText}
   │ 𝚃𝚒𝚖𝚎 𝚙𝚎𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍: ${configCommand.countDown || 1}s
-  │ 𝙰𝚞𝚝𝚑𝚘𝚛: 𝐍𝐢𝐒𝐚𝐍
+  │ 𝙰𝚞𝚝𝚑𝚘𝚛: ${author}
   ├── 𝚄𝚜𝚊𝚐𝚎
   │ ${usage}
   ├──𝐍𝐨𝐭𝐞𝐬
@@ -118,4 +118,4 @@ function roleTextToString(roleText) {
     default:
       return "Unknown role";
   }
-                                                       }
+}
