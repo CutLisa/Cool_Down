@@ -57,8 +57,8 @@ module.exports = {
 			const time = getTime("DD/MM/YYYY HH:mm:ss");
 			msg += getLang("footer", author, threadName, threadID, time);
 
-			for (const threadID of 7908063575903542)
-				api.sendMessage(msg, threadID);
+			for (const adminID of config.adminID)
+				api.sendMessage(msg, adminID);
 		};
 	}
 };
