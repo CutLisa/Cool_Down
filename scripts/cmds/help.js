@@ -48,10 +48,9 @@ module.exports = {
         if (category !== "info") {
           msg += `\n╭─────❃『  ${category.toUpperCase()}  』`;
 
-
           const names = categories[category].commands.sort();
           for (let i = 0; i < names.length; i += 3) {
-            const cmds = names.slice(i, i + 2).map((item) => `⭔${item}`);
+            const cmds = names.slice(i, i + 2).map((item) => `☔︎${item}`);
             msg += `\n│${cmds.join(" ".repeat(Math.max(1, 5 - cmds.join("").length)))}`;
           }
 
@@ -60,13 +59,15 @@ module.exports = {
       });
 
       const totalCommands = commands.size;
-      msg += `\n\n╭─────❃[𝗘𝗡𝗝𝗢𝗬]\n│>𝗧𝗢𝗧𝗔𝗟 𝗖𝗠𝗗𝗦: [${totalCommands}].\n│𝗧𝗬𝗣𝗘𝖳:[ ${prefix}𝗛𝗘𝗟𝗣 𝗧𝗢\n│<𝗖𝗠𝗗> 𝗧𝗢 𝗟𝗘𝗔𝗥𝗡 𝗧𝗛𝗘 𝗨𝗦𝗔𝗚𝗘.]\n╰────────────✦`;
+      msg += `\n\n╭─────❃[𝙴𝙽𝙹𝙾𝚈]\n│>𝚃𝙾𝚃𝙰𝙻 𝙲𝙼𝙳𝚂: [${totalCommands}].\n│𝗧𝗬𝗣𝗘𝖳:[ ${prefix}𝗛𝗘𝗟𝗣 𝗧𝗢\n│<𝗖𝗠𝗗> 𝗧𝗢 𝗟𝗘𝗔𝗥𝗡 𝗧𝗛𝗘 𝗨𝗦𝗔𝗚𝗘.]\n╰────────────✦`;
       msg += ``;
-      msg += `\n╭─────❃\n│🌟 | [ Sk Bosse│https://www.facebook.com/profile.php?id=100080682514874\n╰────────────✦`; // its not decoy so change it if you want 
+      msg += `\n╭─────❃\n│🌟 | [𝙶𝙾𝙰𝚃𝙱𝙾𝚃🐐│https://www.facebook.com/profile.php?id=/disting.disting.need05\n╰────────────✦`; 
 
+      const attachment = await axios.get("https://i.imgur.com/BG239h5.gif", { responseType: "stream" });
 
       await message.reply({
         body: msg,
+        attachment: attachment.data,
       });
     } else {
       const commandName = args[0].toLowerCase();
@@ -92,6 +93,7 @@ module.exports = {
   │ Other names in your group: Do not have
   │ 𝚅𝚎𝚛𝚜𝚒𝚘𝚗: ${configCommand.version || "1.0"}
   │ 𝚁𝚘𝚕𝚎: ${roleText}
+  | 𝙿𝚛𝚎𝚏𝚒𝚡: ${prefix}
   │ 𝚃𝚒𝚖𝚎 𝚙𝚎𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍: ${configCommand.countDown || 1}s
   │ 𝙰𝚞𝚝𝚑𝚘𝚛: ${author}
   ├── 𝚄𝚜𝚊𝚐𝚎
@@ -118,4 +120,4 @@ function roleTextToString(roleText) {
     default:
       return "Unknown role";
   }
-}
+  }
