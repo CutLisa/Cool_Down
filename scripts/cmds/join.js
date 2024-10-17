@@ -3,7 +3,7 @@ module.exports = {
     name: "join",
     aliases: ['addme', 'joinme'],
     version: "1.0",
-    author: "𝐀𝐒𝐈𝐅 𝐱𝟔𝟗",
+    author: "NisaN",
     countDown: 5,
     role: 0,
     shortDescription: {
