@@ -23,11 +23,6 @@ module.exports = {
     const hours = Math.floor((uptime / (60 * 60)) % 24);
     const days = Math.floor(uptime / (60 * 60 * 24));
     const uptimeString = `╭──𝚂𝙺 𝙽𝙸 𝚂 𝙰𝙽 𝙱𝚘𝚃 ☔︎𝚄𝙿𝚃𝚒𝚖𝚎⏳👈\n├⏳ 𝙷𝙾𝚄𝚁𝚂 ${hours}\n├⏰ 𝙼𝙸𝙽𝚄𝚃𝙴𝚂 ${minutes}\n├⏲️ 𝚂𝙴𝙲𝙾𝙽𝙳𝚂 ${seconds}\n╰───────────✰`;
-    const attachment = await axios.get("https://i.imgur.com/BG239h5.gif", { responseType: "stream" });
-          await message.reply({
-        body: msg,
-        attachment: attachment.data,
-      });
     api.sendMessage(`${uptimeString}`, event.threadID);
   }
 }
